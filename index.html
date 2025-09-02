@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>ZeroTrace Login</title>
+    <link rel="stylesheet" href="src/style.css"/>
+  </head>
+
+  <body>
+  
+
+    <h1 class="glitch" data-text="ZEROTRACE">ZEROTRACE</h1>
+    <div class="login-container">
+      <p>Secure messaging for a private future</p>
+
+      <input type="text" id="email" placeholder="Enter email"/>
+      <input type="password" id="password" placeholder="Enter password"/>
+
+       <button id="login-btn">Login</button>
+      <button id="signup-btn">Sign Up</button>
+      <p> Don't have an account? Sign up</p>
+
+    </div>
+   
+          
+     <script type="module" src="src/firebase.js"></script>
+    <script type="module" src="src/auth.js"></script>
+   
+    <script>
+      const toggle = document.getElementById("menu-toggle");
+      const menu = document.getElementById("nav-menu");
+      toggle.addEventListener("click", () => {
+        menu.classList.toggle("active");
+      });
+    </script>
+       
+  </body>
+</html>
+
+
+        
+        

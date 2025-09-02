@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+   <meta charset = "UTF-8"/>
+   <meta name ="viewport" content="width=device-width, initial-scale= 1.0"/>
+   <title> Zerotrace ChatRoom</title>
+   <link rel ="stylesheet" href="/src/style.css"/>
+</head>
+<body class ="chat-terminal">
+    
+    <div class = "terminal-screen">
+        <div class="terminal-header">
+            <span class = "terminal-title">Zerotrace@chat</span>
+            <button id="logoutBtn">Log Out</button>
+        </div>
+        
+        <div id="chatDisplayArea" class = "chat-box">
+            
+        </div>
+        
+        <form id="messagesForm" class ="message-form">
+            <span class="prompt-symbol">$</span>
+            <input
+            type = "text"
+            id="message-input"
+            autocomplete="off"
+            placeholder="Type your message..."
+            />
+            <button type ="submit" id="send-btn">Send</button>
+        </form>
+    </div>
+   
+<script  src="./src/chat.js" type="module"></script>
+    
+</body>
+</html>
