@@ -1,32 +1,69 @@
-ZeroTrace is a secure, terminal-inspired messaging interface built with Javascript and firebase . It allows users to chat in real-time using codename identities, with messages that automatically disappear after 5 minutes. 
+# ZeroTrace
+ZeroTrace is my first made website, it is a terminal-inspired secure messaging web application built with JavaScript, Firebase Authentication, Cloud Firestore, and Vite.
 
-This project is part of my cybersecurity internship poertfolio to demonstrate secure frontend logic, real-time database usage, and anonymous authentication. 
+The application allows users to create an accounts, choose anonymous codenames, exchange messages in real time, and automatically remove messages after a short period. 
 
-## Features Completed
-- **Email/Password sign-up** using Firebase Authentication
-- **Codename creation step** before entering chat
-- **Real-time messaging** using Firebase Firestore 
-- **Messages auto delete after 5 minutes** 
-- **Terminal style chat UI**
-- **Secure logout flow**
+# Live Demo
+[Launch ZeroTrace] https://zerotrace-14b10.web.app
+
+## Features
+
+- Email/password authentication using Firebase Authentication
+- Codename creation before entering the chat
+- Real-time messaging using Cloud Firestore
+- Messages automatically delete after 5 minutes
+- Terminal-inspired chat interface
+- Secure logout flow
+- Multi-page production build with Vite
+- Deployed using Firebase Hosting
 
 ## Future plans
-- **Visual delete animations**
-- **Dark/light mode toggle**
-- **Codename Generator**
-- **Read/unread indicators**
-- **change codename** 
-- **forget password**
+- Add Visual message delete animations
+- Dark/light theme support
+- Add a random Codename Generator
+- Add Read/unread message indicators
+- Allow users to change their codename
+- Allow password reset functionality
+
 
 ## Tech Stack
-- **Frontend: HTML, CSS, JavaScript**
-- **Backend: Firebase Auth, Firestore**
-- **Tools: Vs code, git, github, Vite**
+
+- **Frontend:** HTML, CSS, JavaScript
+- **Authentication:** Firebase Authentication
+- **Database:** Cloud Firestore
+- **Build Tool:** Vite
+- **Hosting:** Firebase Hosting
+- **Version Control:** Git & GitHub
+
+
+## Security & Privacy
+
+- Firebase Authentication manages user sign-in and account access
+- Firestore stores chat data and user profile information
+- Environment variables keep Firebase configuration out of committed source files
+- Messages are designed to automatically delete after 5 minutes
+- Codename-based identities reduce the need to display personal information in chat
+
+
+## Project Structure
+
+- **index.html:** Login and signup interface
+- **codename.html:** Codename selection before entering chat
+- **chat.html:** Main real-time chat interface
+- **src/auth.js:** Authentication and redirect logic
+- **src/codename.js:** Codename creation and saving logic
+- **src/chat.js:** Real-time messaging and message deletion logic
+- **src/firebase.js:** Firebase initialization
+- **src/style.css:** Application styling
+- **vite.config.js:** Multi-page Vite build configuration
+- **.env.example:** Template for required environment variables
+
+
 
 ## Project file overview
-- **index.html: Login and Signup interface**
-- **codename.html: Codename selector before entering chat**
-- **chat.html: Main chat room with terminal style UI**
-- **auth.js: Handles signup,login, and logout flow**
-- **style.css: Styling for the entire project**
-- **.env.local: Firebase credentials**
+- index.html: Login and Signup interface
+- codename.html: Codename selector before entering chat
+- chat.html: Main chat room with terminal style UI
+- auth.js: Handles signup,login, and logout flow
+- style.css: Styling for the entire project
+- .env.example: Template for required Firebase environment variables

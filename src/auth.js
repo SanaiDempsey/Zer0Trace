@@ -20,9 +20,9 @@ console.log("current page is", currentpage);
 //redirect based on Authentiction and codename availability
 onAuthStateChanged(auth, async(user)=>{
   if(!user){
-    // If not logged in and not on login page, redirect to index.html
+    // If not logged in and not on login page, redirect to /index.html
     if(!currentpage.includes("index.html")){
-      window.location.href = "index.html";
+      window.location.href = "/index.html";
     }
     return;
   }
@@ -32,11 +32,11 @@ onAuthStateChanged(auth, async(user)=>{
 
   if(docSnap.exists() && docSnap.data().codename !== undefined){
     if(!currentpage.includes("chat.html")){
-      window.location.href = "chat.html";
+      window.location.href = "/chat.html";
     }
   } else{
     if(!currentpage.includes("codename.html")){
-      window.location.href = codename.html;
+      window.location.href = "/codename.html";
     }
   }
 });
@@ -63,7 +63,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
         const userSnap = await getDoc(doc(db, "users", userCredentials.user.uid));
 
         alert("Login successful! Directing to chat")
-        window.location.href = "chat.html";
+        window.location.href = "/chat.html";
         
     } catch(error){
       //Handle auth errors
@@ -101,7 +101,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
             createdAt: new Date()
         });
         alert("Signup successful!");
-        window.location.href = "codename.html";
+        window.location.href = "/codename.html";
         console.log("Redirecting to codename.html");
       } catch(error) {
         //Handle duplicate email error

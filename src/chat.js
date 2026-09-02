@@ -17,7 +17,7 @@ import{
 //import auth functions
 import { onAuthStateChanged, signOut } from "firebase/auth";
 //User Setup
-let codename = "Anonymous";//Incase user has no codename saved
+let codename = localStorage.getItem("codename") || "Anonymous";//Incase user has no codename saved
 
 //Check if user is logged in and retrieve codename
 onAuthStateChanged(auth, async(user)=>{

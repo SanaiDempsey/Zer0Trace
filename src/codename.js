@@ -9,6 +9,12 @@ document.addEventListener("DOMContentLoaded", ()=>{
     const saveBtn = document.getElementById("save-codename");
     const errorDisplay = document.getElementById("codename-error");
 
+    // Guard: if essential elements are missing, abort to avoid runtime errors
+    if (!input || !saveBtn || !errorDisplay) {
+        console.warn("Codename elements missing, aborting codename script.");
+        return;
+    }
+
     let currentUser = null;
 
     // check auth state changed
@@ -20,7 +26,8 @@ document.addEventListener("DOMContentLoaded", ()=>{
             console.error("No user signed in.");
         }
     });
-    saveBtn.addEventListener("click", async()=>{
+    if (saveBtn) {
+     saveBtn.addEventListener("click", async()=>{
         const codename = input.value.trim();
 
         if(!codename){
@@ -59,4 +66,5 @@ document.addEventListener("DOMContentLoaded", ()=>{
             errorDisplay.textContent = "Something went wrong. Try again.";
         }
     });
+   }
 });
